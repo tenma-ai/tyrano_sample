@@ -1,46 +1,39 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="宇宙船の電力復旧"]
 [hidemenubutton]
-[wait time=200]
 [freeimage layer="base"]
+[bg storage=space.svg time=0]
+[cm]
 
-「走るか寝るかするメロス」[l][r]
-
-メロスは激怒した。[l][r]
-
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
-
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
-
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+「宇宙船の電力復旧」[r]
+航行中、船内の照明が消え、警報が鳴った。[r]
+補助電源はあとわずか。あなたはどうする？[r]
+[r]
+[link target=*check] → 警報の原因を確認する [endlink][r]
+[link target=*restart] → すぐに主電源を入れ直す [endlink][r]
 [s]
 
-*tag_sleep
+*check
 
 [cm]
+診断画面で、冷却装置の停止が見つかった。[r]
+先に冷却装置を直してから、主電源を入れ直した。[r]
+照明が戻り、宇宙船は無事に航行を再開した。[r]
+[r]
+【成功 END】 原因の確認が船を救った。[r]
+[r]
+[link target=*start] → もう一度遊ぶ [endlink]
+[s]
 
-[bg storage=sleep.jpg time=500]
-
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
-
-【 BAD END 】[l][cm]
-
-[jump target=*start]
-
-*tag_run
-
-[bg storage=run.jpg time=500]
+*restart
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
-
-【 GOOD END 】[l][cm]
-
-[jump target=*start]
+原因を調べず、主電源のスイッチを入れた。[r]
+冷却装置が止まったまま、発電機が過熱した。[r]
+安全装置が働き、宇宙船は航行不能になった。[r]
+[r]
+【失敗 END】 急ぐときこそ、まず確認。[r]
+[r]
+[link target=*start] → もう一度遊ぶ [endlink]
+[s]
